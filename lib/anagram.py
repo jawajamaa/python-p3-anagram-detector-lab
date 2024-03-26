@@ -16,21 +16,9 @@ class Anagram:
         else:
             raise ValueError("'word' must not be an empty string!")
         
-    def match(word, match_list):
+    def match(self, match_list):
         confirm_match = list()
         for item in match_list:
-            if sorted(word) == sorted(item):
+            if sorted(self.word) == sorted(item.lower()):
                 confirm_match.append(item)
         return confirm_match
-
-        
-    # def match(word, match_list):
-    #     confirm_match = list()
-    #     for item in match_list:
-    #         # breakpoint()
-    #         if word == item:
-    #             confirm_match.append(item)
-    #             breakpoint()
-    #             return confirm_match
-    #         elif word != item:
-    #             return confirm_match
